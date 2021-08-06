@@ -15,3 +15,5 @@ for (product_id, name, uom_id, price_per_unit) in cursor:
     print(product_id, name, uom_id, price_per_unit)
 
 cnx.close()
+
+#test comment
