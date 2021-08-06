@@ -30,6 +30,13 @@ def insert_new_product(cnx, dict_):
       print(x)
     cnx.close()
 
+def delete_product(cnx, product_id):
+    cnx.reconnect()
+    cursor = cnx.cursor()
+    query = ("DELETE FROM products where product_id=" +str(product_id))
+    cursor.execute(query)
+    connection.commit()
+    cnx.close()
 
 if __name__ == '__main__':
     connection = get_sql_connection()
@@ -37,5 +44,6 @@ if __name__ == '__main__':
 
     dict_ = {'product_name': 'potato', 'uom_id': '1', 'price_per_unit': 10}
     insert_new_product(connection, dict_)
+    delete_product(connection, 4)
 
     get_all_products(connection)
