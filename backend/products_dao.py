@@ -1,17 +1,17 @@
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root', password='password1',
+cnx = mysql.connector.connect(user='root', password='jajaveve',
                               host='127.0.0.1',
-
                               database='store')
 
-cursor = cnx.cursor()   #cursor will hold data from sql query
+mycursor = cnx.cursor()
 
-query = "SELECT * FROM store.products;"
+mycursor.execute("SELECT * FROM orders")
 
-cursor.execute(query)
+myresult = mycursor.fetchall()
 
-for (product_id, name, uom_id, price_per_unit) in cursor:
-    print(product_id, name, uom_id, price_per_unit)
+print("test")
+for x in myresult:
+  print(x)
 
 cnx.close()
