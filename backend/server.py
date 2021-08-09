@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 connection = get_sql_connection()
 
-# @app.route('/hello')
-# def hello():
-#    return "Hello, how are you dude?"
+@app.route('/hello')
+def hello():
+    return "Hello, how are you dude?"
 
 
 @app.route('/get_products', methods=['GET'])
