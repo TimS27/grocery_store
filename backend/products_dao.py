@@ -64,7 +64,6 @@ def update_product(cnx, product_id, changed_price):
 def create_random_order(cnx, min_total):
     #get all items which are in the database
     cnx.reconnect()
-    #test
     mycursor = cnx.cursor()
     query1 = "SELECT products.product_id, products.name, products.uom_id, products.price_per_unit, uom.uom_name FROM products inner join uom on products.uom_id = uom.uom_id"
     mycursor.execute(query1)
