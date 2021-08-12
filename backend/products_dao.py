@@ -115,9 +115,9 @@ def create_random_order(cnx, min_total):
 if __name__ == '__main__':
     connection = get_sql_connection()
     dict_ = {'product_name': 'premium potato', 'uom_id': '1', 'price_per_unit': 100}
-    #insert_new_product(connection, dict_)
+    insert_new_product(connection, dict_)
     #delete_product(connection,  [i for i in range(20,49)])
     #get_all_products(connection)
-    print(type(connection))
-    update_product(connection, 46, 10000)
-    create_random_order(connection, 100)
+    #print(type(connection))
+    #update_product(connection, 46, 10000)
+    #create_random_order(connection, 100)
