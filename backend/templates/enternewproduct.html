@@ -1,6 +1,58 @@
-<form action = "http://localhost:5000/result" method = "POST">
-   <p>Name <input type = "text" name = "Name" /></p>
-   <p>uom_id <input type = "text" name = "uom_id" /></p>
-   <p>price_per_unit <input type = "text" name = "price_per_unit" /></p>
-   <p><input type = "submit" value = "submit" /></p>
-</form>
+<!--By design, the POST request method requests that a web server accepts
+ the data enclosed in the body of the request message, most likely for storing it. --!>
+<style>
+.container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<html>
+
+<head>
+  <title>Example form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<!-- Name, uom_id, price_per_unit  --!>
+<body>
+
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+
+
+   <div class="container">
+   <form action = "http://localhost:5000/result" method = "POST">
+
+       <div class="row">
+      <label>Name</label>
+           <div class="col-xs-1">
+                <input type="text" name="Name"><br />
+           </div>
+      <label>uom_id</label>
+      <input type="text" name="uom_id"><br />
+      <label>price_per_unit</label>
+      <input type="text" name="price_per_unit"><br />
+       </div>
+      <p><input  class="btn btn-block btn-primary" type = "submit" value = "submit" /></p>
+
+
+   </form>
+   </div>
+</body>
+
+
+</html>
